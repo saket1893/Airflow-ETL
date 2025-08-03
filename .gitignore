@@ -1,0 +1,15 @@
+# Docker-related files
+*.log
+docker-compose.override.yml
+
+# Airflow specific
+airflow/.airflow
+
+# MySQL data
+mysql/data/
+mysql/*.sql
+
+# Python
+*.pyc
+*.pyo
+__pycache__/

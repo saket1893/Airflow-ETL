@@ -1,0 +1,13 @@
+CREATE DATABASE IF NOT EXISTS airflow;
+
+CREATE TABLE IF NOT EXISTS users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255),
+    email VARCHAR(255),
+    address TEXT,
+    date_of_birth DATE
+);
+
+CREATE USER 'airflow'@'%' IDENTIFIED BY 'airflowpassword';
+GRANT ALL PRIVILEGES ON airflow.* TO 'airflow'@'%';
+FLUSH PRIVILEGES;
